@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Ubuntu:wght@500&display=swap');
+.main-card-div{
+    /* text-align: center; */
+    /* justify-content: center; */
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+
+}
+.subscription-card{
+    width: 100%;
+    height: 100%;
+  
+    border-radius: 10px;
+    border: none;
+    padding-right: 0 !important;
+}
+.subscription-card.ant-card-body{
+    padding-right: 0 !important;
+}
+.subscription-background{
+    background: #F7F8FF;
+}
+.contact-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 46px;
+    color: #000000;
+}
+.para-div-main{
+    text-align: left;
+}
+.price-doller{
+    font-size: 40px;
+    margin-bottom: 0;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 275;
+font-size: 73px;
+line-height: 110px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+.offer-div{
+    width: 282px;
+    padding: 14px;
+    margin: 1rem auto;
+    text-align: left;
+    /* background: #FFFFFF; */
+    /* border-radius: 30px; */
+    padding-left: 0;
+}
+/* .rectangle-img-div{
+    width: 50px;
+    height: auto;
+} */
+.upto-users{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+color: #000000;
+text-align: left;
+}
+.rectangle-image{
+    width: 100%;
+    height: auto;
+    box-shadow: linear-gradient(270deg, #FF7878 0%, #FF1E1E 100%) 0px 8px 24px;
+}
+.card-div-main{
+    width: 96%;
+    margin: 1rem auto;
+    margin-top: 3rem;
+}
+.image-log-subs{
+    width: 27%;
+    margin: 1rem auto;
+}
+.image-log-subs img{
+    width: 100%;
+    height: auto;
+}
+.choose-team{
+    color: #fff;
+}
+.card-backgrounds{
+    background: url('../../../../assets/images/Group\ 1123.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.offer-para{
+margin-top: 0;
+margin-bottom: 0;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 20px;
+
+color: #787878;
+}
+.free-plan{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+color: #000000;
+text-align: left;
+}
+.price-total{
+text-align: left;
+}
+.free-plan-div{
+    width: 53%;
+}
+.discount-para5{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 22px;
+color: #FFFFFF;
+text-align: right;
+}
+.annually{
+    font-size: 18px;
+}
+.monthly{
+    font-size: 18px; 
+    color: #D35400;
+}
+.discount-para-div{
+    text-align: right;
+}
+.offer-doller{
+    color: #3751FF;
+}
+
+.offer-list{
+    width: 73%;
+    /* margin: 0 auto; */
+
+}
+
+.offer-list ul li{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 43px;
+align-items: center;
+list-style: none;
+color: #263238;
+}
+
+.offer-list ul{
+padding-left: 0;
+text-align: left;
+}
+.list-icons{
+    width: 13px;
+    margin-right: 10px;
+}
+.upgrade-btn{
+    width: 174px;
+    height: 47px;
+    /* left: 123px;
+    top: 580px; */
+    
+    background: #3751FF;
+    border-radius: 30px;
+    color: white;
+}
+.upgrade-btn:hover{ 
+    background: #00BE52 !important;
+    color: white !important;
+}
+.button-div{
+    text-align: left;
+    margin-top: 20px;
+}
+.month-total{
+    margin: 0;
+    line-height: 17px;
+}
+.second-plan{
+    color: #1BADDB;
+}
+.third-plan{
+    color: #625FDA;
+}
+.monthly-bill{
+    margin: 0;
+}
+
+.ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap, .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-wrap{
+    justify-content: flex-end;
+}
+
+.ant-tabs-tab{
+    padding: 10px 5px;
+     margin-right: 0px;
+}
+.button-free{
+    margin-top: 31px;
+}
+
+.react-tel-input .form-control{
+width:100% !important;
+height: 51px !important;
+border: 1px solid #8692A6 !important;
+border-radius: 6px !important;
+background: #F6F8FF !important;
+}
+.receipt{
+    margin-bottom: 0;
+}
+
+.contact-btn{
+    background-color: #00BE52;
+    border-radius: 6px !important;
+}
+
+.contact-btn-div{
+    width: 426px;
+    margin: auto;
+}
+
+.contact-main-heading{
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 37px;
+    color: #000000;
+}
+.rectangle-img-div-contact{
+width: 54px;
+height: auto;
+// margin-top: 18px;
+}
+.icon-contact{
+    width: 100%;
+    height: auto;
+}
+
+.contact-text{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 23px;
+/* or 164% */
+
+display: flex;
+align-items: center;
+
+color: #263238;
+margin-bottom: 0 !important;
+
+}
+.contact-icon-div{
+    width: 100px;
+    border-right: 1px solid #8692A6;
+}
+
+.para-div-side{
+    padding: 12px;
+}
+
+.link-help-center{
+    margin-top: 20px;
+}
+.genpact-div{
+    width: 424px;
+background: #F5F5F5;
+border: 1px solid #8692A6;
+border-radius: 6px;
+margin-top: 22px;
+}
+.genpact-para-div{
+    padding: 12px;
+}
+.genpact-para{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.marketing-para{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 23px;
+/* or 164% */
+
+display: flex;
+align-items: center;
+margin-bottom: 0;
+margin-top: 10px;
+color: #8692A6;
+}
+
+.input-field-contact{
+    border: 1px solid #8692A6;
+    border-radius: 6px !important;
+    background: #F6F8FF !important;
+    height: 51px !important;
+}
+
+.input-field-phone-contact{
+    height: 51px !important;
+}
+
+.thankumsg{
+    width: 60%;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 10px;
+    /* height: 102px; */
+    padding: 34px;
+}
+
+.thanku-head{
+    color:#000000;
+    text-align: center;
+}
