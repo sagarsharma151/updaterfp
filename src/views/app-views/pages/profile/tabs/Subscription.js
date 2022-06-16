@@ -6,24 +6,22 @@ import { useSelector, useDispatch } from "react-redux";
 import Logo from "../../../../../assets/images/LOGO.png";
 import { Select } from "antd";
 import ListData,{basiclist} from './Listdata'
-import Listicon from "../../../../../assets/images/Group.png";
 import contact from '../../../../../assets/images/contacts.png'
 import contact1 from '../../../../../assets/images/contact1.png'
-import { Tabs } from "antd";
-import { Provider } from "./FormContext";
+// import { Tabs } from "antd";
 import { Switch } from "antd";
 import {
   StateDetails,
   UserState,
   ListOfSubscriptionPlan,
 } from "redux/actions/profile";
-const { TabPane } = Tabs;
+// const { TabPane } = Tabs;
 const { Option, OptGroup } = Select;
 
 const Subscription = (props) => {
   const dispatch = useDispatch();
   const [subscriptions, setSubscriptions] = useState();
-  const data = useSelector((state) => state.profile.user.payload);
+  // const data = useSelector((state) => state.profile.user.payload);
   const plans = useSelector((state) => state.subscriptionPlan.user);
   const [allData, setAlldata] = useState([]);
   const [basic, setBasic] = useState(0);
@@ -38,31 +36,32 @@ const Subscription = (props) => {
       setSubscriptions(plans);
       getPlans();
     }
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [plans]);
   console.log(
     subscriptions,
     "subscriptionssubscriptionssubscriptionssubscriptions"
   );
-  const [planid, setPlanid] = useState(1);
-  const handleplan = () => {
-    setPlanid();
-  };
+  // const [planid, setPlanid] = useState(1);
+  // const handleplan = () => {
+  //   setPlanid();
+  // };
   console.log(plans, "plans12345678");
   function getPlans() {
     plans &&
-      plans.map((data, i) => {
-        data.maximumUserAllowed == selectMaxUser && data.planName == "BASIC" ? (
+      plans.map((data, i) => (
+        data.maximumUserAllowed === selectMaxUser && data.planName === "BASIC" ? (
           <>{`${setBasic(data.monthlyRate)} ${setYearBasic(
             data.annualRate
           )} ${setAlldata(data)}`}</>
         ) : (
           console.log(data.maximumUserAllowed)
-        );
-      });
+        )
+      ));
     plans &&
-      plans.map((data, i) => {
-        data.maximumUserAllowed == selectMaxUser &&
-        data.planName == "Business Development" ? (
+      plans.map((data, i) => (
+        data.maximumUserAllowed === selectMaxUser &&
+        data.planName === "Business Development" ? (
           <>{`${setYearBuisness(data.annualRate)} ${setBuisness(
             data.monthlyRate
           )} ${setAlldata(data)}`}</>
@@ -72,13 +71,14 @@ const Subscription = (props) => {
             "annualRateannualRateannualRate",
             data.annualRate
           )
-        );
-      });
+        )
+      ));
   }
 
   React.useEffect(() => {
     getPlans();
     dispatch(UserState(selectMaxUser));
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectMaxUser]);
 
   function handleChange(value) {
@@ -90,11 +90,11 @@ const Subscription = (props) => {
   }
   useEffect(() => {
     dispatch(ListOfSubscriptionPlan());
-  }, []);
+  }, [dispatch]);
 
-  const onChanges = (key) => {
-    console.log(key);
-  };
+  // const onChanges = (key) => {
+  //   console.log(key);
+  // };
   const onChangeplan = (checked) => {
     console.log(`switch to ${checked}`);
     setSwitch(checked);
@@ -117,7 +117,7 @@ const Subscription = (props) => {
       <Card className="card-backgrounds">
         <div className="card-div-main">
           <div className="image-log-subs">
-            <img src={Logo} />
+            <img src={Logo} alt=''/>
           </div>
           <div>
             <label className="choose-team">Choose team size:&nbsp;</label>&nbsp;
@@ -221,7 +221,7 @@ const Subscription = (props) => {
                           {basiclist.map((data,i)=>(
                              <li>
                            <div className="d-flex">
-                          <div> <img src={data.image} className="list-icons" /></div>
+                          <div> <img src={data.image} className="list-icons" alt=''/></div>
                           <div>  {data.name}</div>
                         </div>
                            </li>
@@ -317,7 +317,7 @@ const Subscription = (props) => {
                         {basiclist.map((data,i)=>(
                              <li>
                               <div className="d-flex">
-                          <div> <img src={data.image} className="list-icons" /></div>
+                          <div> <img src={data.image} className="list-icons" alt=''/></div>
                           <div>  {data.name}</div>
                         </div>
                            </li>
@@ -382,7 +382,7 @@ const Subscription = (props) => {
                         {ListData.map((data,i)=>(
                              <li>
                              <div className="d-flex">
-                          <div> <img src={data.image} className="list-icons" /></div>
+                          <div> <img src={data.image} className="list-icons" alt=''/></div>
                           <div>  {data.name}</div>
                         </div>
                            </li>
@@ -445,7 +445,7 @@ const Subscription = (props) => {
                         {basiclist.map((data,i)=>(
                              <li>
                               <div className="d-flex">
-                          <div> <img src={data.image} className="list-icons" /></div>
+                          <div> <img src={data.image} className="list-icons" alt=''/></div>
                           <div>  {data.name}</div>
                         </div>
                            </li>
@@ -509,7 +509,7 @@ const Subscription = (props) => {
                         {basiclist.map((data,i)=>(
                              <li>
                            <div className="d-flex">
-                          <div> <img src={data.image} className="list-icons" /></div>
+                          <div> <img src={data.image} className="list-icons" alt=''/></div>
                           <div>  {data.name}</div>
                         </div>
                            </li>
@@ -572,7 +572,7 @@ const Subscription = (props) => {
                         {ListData.map((data,i)=>(
                              <li>
                              <div className="d-flex">
-                          <div> <img src={data.image} className="list-icons" /></div>
+                          <div> <img src={data.image} className="list-icons" alt=''/></div>
                           <div>  {data.name}</div>
                         </div>
                            </li>
@@ -596,7 +596,7 @@ const Subscription = (props) => {
                     </div>
                   </div>
                   <div className="contact-img-div-main">
-                     <img src={contact}  className='contact-icon-page'/>
+                     <img src={contact}  className='contact-icon-page' alt=''/>
                     </div>
                   <div className="button-div">
                     <Button
@@ -623,7 +623,7 @@ const Subscription = (props) => {
                       {basiclist.map((data,i)=>(
                          <li>
                          <div className="d-flex">
-                          <div> <img src={data.image} className="list-icons" /></div>
+                          <div> <img src={data.image} className="list-icons" alt=''/></div>
                           <div>  {data.name}</div>
                         </div>
                        </li>
@@ -671,7 +671,7 @@ const Subscription = (props) => {
                     </div>
                   </div>{" "}
                   <div className="contact-img-div-main">
-                     <img src={contact}  className='contact-icon-page'/>
+                     <img src={contact}  className='contact-icon-page' alt=''/>
                     </div>
                   <div className="button-div">
                     <Button
@@ -700,7 +700,7 @@ const Subscription = (props) => {
                         
                       
                         <div className="d-flex">
-                          <div> <img src={data.image} className="list-icons" /></div>
+                          <div> <img src={data.image} className="list-icons" alt=''/></div>
                           <div>  {data.name}</div>
                         </div>
                        </li>
@@ -718,7 +718,7 @@ const Subscription = (props) => {
                     </div>
                   </div>{" "}
                   <div className="contact-img-div-main">
-                     <img src={contact1}  className='contact-icon-page'/>
+                     <img src={contact1}  className='contact-icon-page' alt=''/>
                     </div>
                   <div className="button-div">
                     <Button
@@ -748,7 +748,7 @@ const Subscription = (props) => {
                     {ListData.map((data,i)=>(
                          <li>
                          <div className="d-flex">
-                          <div> <img src={data.image} className="list-icons" /></div>
+                          <div> <img src={data.image} className="list-icons" alt=''/></div>
                           <div>  {data.name}</div>
                         </div>
                        </li>

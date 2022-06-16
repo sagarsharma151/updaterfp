@@ -1,6 +1,6 @@
 import { all, takeEvery, put, fork, call, takeLatest } from 'redux-saga/effects';
 import { notification } from 'antd';
-import {SignUpDataSuccess,SignUpDataFailed,UserStateSuccess,UserStateFaild,ListOfSubscriptionPlanSuccess,ListOfSubscriptionPlanFailed,StateDetails,StateDetailsSuccess,StateDetailsFaild, changeProfilePasswordFailed, uploadImageFailed, changeProfilePasswordSuccess, deleteUsersFailed, deleteUsersSuccess, profileGetUsersFailed, profileGetUsersSuccess, profileUserAddFailed, profileUserAddSuccess, updateAddProfileFailed, updateAddProfileSuccess, uploadImageSuccess } from "redux/actions/profile";
+import {SignUpDataSuccess,SignUpDataFailed,UserStateSuccess,UserStateFaild,ListOfSubscriptionPlanSuccess,ListOfSubscriptionPlanFailed,StateDetailsSuccess,StateDetailsFaild, changeProfilePasswordFailed, uploadImageFailed, changeProfilePasswordSuccess, deleteUsersFailed, deleteUsersSuccess, profileGetUsersFailed, profileGetUsersSuccess, profileUserAddFailed, profileUserAddSuccess, updateAddProfileFailed, updateAddProfileSuccess, uploadImageSuccess } from "redux/actions/profile";
 import {SIGNUP_DATA,USERS_STATES,SUBSCRIPTION_PLAN,STATE_DEATILS, AUTH_TOKEN, CHANGE_PROFILE_PASSWORD, DELETE_REQUEST, PROFILE_ADD_USER, PROFILE_GET_USER, UPDATE_ADDUSER_PROFILE, UPLOAD_IMAGE } from "redux/constants/Auth";
 import JwtAuthService from "services/JwtAuthService";
 import Swal from 'sweetalert2';

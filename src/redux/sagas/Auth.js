@@ -10,7 +10,6 @@ import {
 	SEND_MAIL_LINK_SUCCESS,
 	SIGNOUT,
 	SIGNUP,
-	SIGNUP_DATA,
 	PLANS,
 	UPDATE_PROFILE,
 	VERIFY,
@@ -44,7 +43,7 @@ import {
 import { notification } from 'antd';
 import FirebaseService from 'services/FirebaseService'
 import JwtAuthService from 'services/JwtAuthService';
-import dashBoardService from "services/dashBoardService";
+// import dashBoardService from "services/dashBoardService";
 // import { useHistory } from 'react-router-dom';
 
 
@@ -179,7 +178,7 @@ export function* plan() {
 			console.log(payload,'payload-request')
 			const user = yield call(JwtAuthService.allplans, payload);
 			console.log(user.success,'allplans999999')
-			if (user && user.success == true) {
+			if (user && user.success === true) {
 				yield put(PlansSuccess(user));
 				// payload.route.push('/app/dashboards');
 				notification['success']({

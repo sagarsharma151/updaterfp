@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Tabs } from 'antd';
 import Profile from './tabs/Profile';
 import Users from './tabs/Users';
-import Subscription from './tabs/Subscription';
+// import Subscription from './tabs/Subscription';
 import Multistep from '../../../auth-views/authentication/register-2/Multistep'
 import "./UserProfile.css"
 import SettingProfile from './tabs/Settings';

@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import { connect,useSelector,useDispatch } from 'react-redux'
 import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { Button, Form, Input, Alert, Checkbox } from "antd";
@@ -6,7 +6,7 @@ import { signUp, showAuthMessage, showLoading, hideAuthMessage } from 'redux/act
 import { SignUpData} from 'redux/actions/profile';
 import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion"
-var CryptoJS = require("crypto-js");
+// var CryptoJS = require("crypto-js");
 const rules = {
 	email: [
 		{
@@ -59,7 +59,7 @@ export const RegisterForm = (props) => {
 	console.log("register..detailsdetailsdetailsuserStateuserStateuserStateuserState.",props)
 const [datasubmit,setDatasubmit] = useState({});
 const [alldata,setAlldata]=useState(false)
-	const { showLoading, loading, message, showMessage } = props
+	const { showLoading,  message, showMessage } = props
 	const [form] = Form.useForm();
 	const history = useHistory();
 	const initialCredential = {
@@ -265,7 +265,7 @@ const [alldata,setAlldata]=useState(false)
 				</Form.Item>
 				<Form.Item>
 				{/* onClick={alldata ? props.next:''} */}
-				{data == "TRIAL" ? <Button type="primary" htmlType="submit" block >
+				{data === "TRIAL" ? <Button type="primary" htmlType="submit" block >
 						Continue
 					</Button> : <Button type="primary" htmlType="submit" block  onClick={alldata ? props.next():null}>
 						Register Account

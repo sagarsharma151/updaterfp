@@ -7,7 +7,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Logo from "../../../../assets/images/LOGO.png";
 import { Link } from "react-router-dom";
-import {ListOfSubscriptionPlan } from "redux/actions/profile";
+// import {ListOfSubscriptionPlan } from "redux/actions/profile";
 import { contact } from "redux/actions/Auth";
 import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -41,9 +41,9 @@ const Subscription = (props) => {
   //     dispatch(StateDetails(value));
   //   }
   // }
-  useEffect(() => {
-    dispatch(ListOfSubscriptionPlan());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(ListOfSubscriptionPlan());
+  // }, [dispatch]);
 
   const data = useSelector((state) => state.profile.user.payload);
   console.log("register..detailsdetailsdetails.", data);

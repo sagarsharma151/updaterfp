@@ -1,22 +1,22 @@
 import React, { useMemo,useEffect,useState } from 'react';
 import {loadStripe} from '@stripe/stripe-js';
 import { useSelector, useDispatch } from "react-redux";
-import { Button, Col, Row, Card } from "antd";
-import { signUp,Plans} from 'redux/actions/Auth';
+import { Card } from "antd";
+import {Plans} from 'redux/actions/Auth';
 import {
   CardElement,
   Elements,
   useStripe,
   useElements,
 } from '@stripe/react-stripe-js';
-import {useHistory} from 'react-router-dom'
+// import {useHistory} from 'react-router-dom'
 import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Logo from "../../../assets/images/LOGO.png";
 import Doller from '../../../assets/images/Vector.png';
 import Users from '../../../assets/images/users.png';
 import Month from '../../../assets/images/shape.png'
 import './Stripe.scss'
-var CryptoJS = require("crypto-js");
+// var CryptoJS = require("crypto-js");
 const useOptions = () => {
   // const fontSize = useResponsiveFontSize();
   const options = useMemo(
@@ -44,7 +44,7 @@ const useOptions = () => {
 
 const CheckoutForm  = () => {
   var myDate = new Date();
-  const history = useHistory();
+  // const history = useHistory();
   const dispatch = useDispatch();
   const userState = useSelector(state=>state.Userstate.user.payload)
   let daysList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -81,22 +81,22 @@ let today = `${day} ${date} ${month}, ${year} | ${currentTime}`;
   const handleSubmit = async event => {
     event.preventDefault();
     if (items) {
-   const signUpRequest = {
-    "userName":items.userName,
-    "email":items.email,
-    "password":items.password,
-    "roleName":items.roleName,
-    "firstName":items.firstName,
-    "lastName":items.lastName,
-    "companyName": items.componyName,
-    "title":items.title,
-    "officeNumber":items.officeNumber,
-    "cellNumber":items.cellNumber,
-    "licenceType":items.licenceType,
-    "planName":items.planName,
-    "maximumUserAllowed":items.maximumUserAllowed,
-    "billingCycle":items.billingCycle
-   }
+  //  const signUpRequest = {
+  //   "userName":items.userName,
+  //   "email":items.email,
+  //   "password":items.password,
+  //   "roleName":items.roleName,
+  //   "firstName":items.firstName,
+  //   "lastName":items.lastName,
+  //   "companyName": items.componyName,
+  //   "title":items.title,
+  //   "officeNumber":items.officeNumber,
+  //   "cellNumber":items.cellNumber,
+  //   "licenceType":items.licenceType,
+  //   "planName":items.planName,
+  //   "maximumUserAllowed":items.maximumUserAllowed,
+  //   "billingCycle":items.billingCycle
+  //  }
 
    console.log(plans,'plansplansplansplansplansplansplans66666')
   //  const allRequest = {
@@ -153,9 +153,9 @@ if(plans){
     <p className='plan-para'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p></div>
 
     <div className='d-flex justify-content-around'>
-<div className='first-icon'><div className='pyment-icon-div'><img src={Doller} className='pyment-icon-img'/></div></div>
-<div className='second-icon'><div><p className='price-doller-pay'>$ {plans ? plans.price : ''}</p></div><div className='pyment-icon-div'><img src={Month} className='pyment-icon-img'/></div></div>
-<div className='third-icon'><div className='monthly-para'><p className='price-monthly'>{plans ? plans.time : ''}</p></div><div className='pyment-icon-div'><img src={Users} className='pyment-icon-img'/></div></div>
+<div className='first-icon'><div className='pyment-icon-div'><img src={Doller} className='pyment-icon-img' alt=''/></div></div>
+<div className='second-icon'><div><p className='price-doller-pay'>$ {plans ? plans.price : ''}</p></div><div className='pyment-icon-div'><img src={Month} className='pyment-icon-img' alt=''/></div></div>
+<div className='third-icon'><div className='monthly-para'><p className='price-monthly'>{plans ? plans.time : ''}</p></div><div className='pyment-icon-div'><img src={Users} className='pyment-icon-img' alt=''/></div></div>
 <div className='forth-icon'><div><p className='users-count'>{userState}</p></div></div>
     </div>
   <hr/>
@@ -201,7 +201,7 @@ const Stripe = () =>{
     <Card className="pyment-card-backgrounds">
         <div className="pymentcard-div-main">
           <div className="image-log-subs">
-            <img src={Logo} />
+            <img src={Logo} alt=''/>
           </div>
          <h2 className='order-sum'>Order Summery </h2>
           <Card className='pyment-cards'>

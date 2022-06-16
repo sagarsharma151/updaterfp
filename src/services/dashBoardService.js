@@ -1,5 +1,5 @@
 import fetch from "auth/FetchInterceptor";
-import fetchsignup from 'auth/SignupInterceptor'
+// import fetchsignup from 'auth/SignupInterceptor'
 import { BaseUrl } from "./BaseurlConst";
 
 

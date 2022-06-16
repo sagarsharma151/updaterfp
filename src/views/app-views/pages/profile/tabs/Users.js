@@ -101,7 +101,7 @@ console.log(userprofile,'userprofile5555555555')
 
     useEffect(() => {
         dispatch(profileGetUsers())
-    }, []);
+    }, [dispatch]);
 
     // const userProfileData = props.user;
 console.log(userprofile && userprofile.user && userprofile.user.user,'userProfileData')
